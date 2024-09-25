@@ -11,6 +11,7 @@ body {
   font-weight: normal;
   font-style: normal;
   font-variation-settings: "wdth" 100;
+  text-align: justify;
 }
 h1,
 h2,
@@ -28,6 +29,9 @@ p {
   max-width: 1200px;
   margin: 0 auto;
   line-height: 20px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  padding: 0 15px;
+  position: relative;
 }
 
 a {
@@ -36,13 +40,23 @@ a {
   font-size: 16px;
 }
 /* Header */
-
+header {
+  height: 10vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2;
+}
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* background-color: pink; */
   padding: 20px 15px;
+  background-color: white;
+  max-width: 1200px;
+  margin: 0 auto;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 nav {
@@ -54,9 +68,7 @@ nav div {
   padding: 8px;
   display: flex;
   gap: 10px;
-  /* border: 1px solid red; */
   border-radius: 10px;
-  /* background-color: gray; */
 }
 nav a {
   text-transform: uppercase;
@@ -64,17 +76,14 @@ nav a {
 }
 /* Main */
 
-.main {
+.main-section1 {
   display: flex;
-  /* padding-top: 30px; */
-  /* background-color: violet; */
+  padding-top: 20vh;
 }
 .main-left {
   width: 30%;
-  /* background-color: yellow; */
   display: flex;
   align-items: center;
-  padding: 10px;
 }
 .main-left img {
   border-radius: 100%;
@@ -83,7 +92,6 @@ nav a {
 }
 .main-right {
   width: 70%;
-  /* background-color: lightgreen; */
   padding: 30px;
 }
 .main-right-work {
@@ -96,37 +104,62 @@ nav a {
   width: max-content;
   border-radius: 20px;
 }
+.clignote {
+  animation-duration: 10s;
+  animation-name: clignoter;
+  animation-iteration-count: infinite;
+  transition: none;
+}
+@keyframes clignoter {
+  0% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 i.fa-solid.fa-circle {
   color: green;
 }
 .main-right-description {
   margin: 50px 0 20px 0;
 }
-.main-right-description h2 {
+.main-right-description-typewriter h2 {
   font-size: 40px;
-  margin-bottom: 20px;
+}
+.main-right-description-typewriter {
+  animation: typing 2s steps(22), blink 0.5s step-end infinite alternate;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 33ch;
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+
+  border-right: 3px solid;
+}
+@keyframes typing {
+  from {
+    width: 0;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
 }
 .main-right-description h3 {
   font-size: 20px;
   margin: 20px 0;
 }
 
-/* .main-right-description h2,
-h3 {
-  margin-bottom: 20px;
-} */
 .main-right-description p {
-  margin-top: 24px;
-  padding: 20px;
+  padding: 20px 0;
 }
-
-/* .main-right-social {
-  display: flex;
-  gap: 10px;
-}
-.main-right-social {
-  margin: 20px 0;
-} */
 
 .main-right-btn button {
   margin-right: 10px;
@@ -141,7 +174,6 @@ h3 {
   padding: 10px 0;
   border-radius: 5em;
   gap: 15px;
-  opacity: 0.7;
 }
 
 .social-button {
@@ -232,4 +264,56 @@ h3 {
 ::selection {
   color: #fff;
   background: #3ea0e2;
+}
+/* SECTION 2 A PORPOS DE MOI */
+.moi {
+  margin-top: 50px;
+}
+.moi h3 {
+  margin: 30px 0;
+}
+.moi-title {
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.moi-title h2 {
+  border-bottom: 5px solid red;
+  padding-bottom: 20px;
+}
+.connaissance {
+  text-align: center;
+  margin: 30px 0;
+}
+.moi-connaissances {
+  display: flex;
+  gap: 20px;
+}
+
+.moi-connaissances-techniques {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+}
+.moi-connaissances-techniques h4,
+.moi-connaissances-savoir-faire {
+  margin: 30px 0;
+}
+.moi-connaissances-techniques-stack {
+  display: flex;
+  border-bottom: 2px dotted grey;
+}
+.moi-connaissances-techniques-stack h5 {
+  width: 120px;
+  border-right: 2px solid grey;
+  padding: 15px 0;
+}
+.stack-img {
+  padding-left: 20px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
 }
