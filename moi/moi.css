@@ -1,0 +1,15 @@
+.moi-informations {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.moi-image img {
+  border-radius: 20px;
+}
+.moi-description {
+  line-height: 25px;
+}
+.moi-description p {
+  text-align: justify;
+}
