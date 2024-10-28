@@ -13,3 +13,20 @@
 .moi-description p {
   text-align: justify;
 }
+.stack {
+  display: flex;
+  width: 100%;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.skill {
+  width: 20%;
+  border: 2px solid grey;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px 10px;
+  flex-wrap: wrap;
+  border-radius: 20px;
+}
