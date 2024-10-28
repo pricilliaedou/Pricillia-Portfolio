@@ -132,6 +132,54 @@ nav {
   border-radius: 100%;
   background-color: aqua;
 }
+
+.loading {
+  width: 100%;
+  min-height: 100vh;
+  position: fixed;
+  z-index: 1000;
+  background-color: grey;
+  opacity: 0.9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+}
+.loader {
+  height: 15px;
+  width: 60px;
+  --c: no-repeat
+    repeating-linear-gradient(#0000 0 6px, #000 0 9px, #0000 0 15px);
+  background: var(--c), var(--c), var(--c), var(--c);
+  background-size: 26% 200%;
+  animation: l4 1.5s infinite linear;
+  z-index: 1000;
+}
+@keyframes l4 {
+  0%,
+  70%,
+  100% {
+    background-position: calc(0 * 100% / 3) 100%, calc(1 * 100% / 3) 100%,
+      calc(2 * 100% / 3) 100%, calc(3 * 100% / 3) 100%;
+  }
+  17.5% {
+    background-position: calc(0 * 100% / 3) 0, calc(1 * 100% / 3) 100%,
+      calc(2 * 100% / 3) 100%, calc(3 * 100% / 3) 100%;
+  }
+  35% {
+    background-position: calc(0 * 100% / 3) 0, calc(1 * 100% / 3) 0,
+      calc(2 * 100% / 3) 100%, calc(3 * 100% / 3) 100%;
+  }
+  52.5% {
+    background-position: calc(0 * 100% / 3) 0, calc(1 * 100% / 3) 0,
+      calc(2 * 100% / 3) 0, calc(3 * 100% / 3) 100%;
+  }
+  69.99% {
+    background-position: calc(0 * 100% / 3) 0, calc(1 * 100% / 3) 0,
+      calc(2 * 100% / 3) 0, calc(3 * 100% / 3) 0;
+  }
+}
 /* @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto+Slab:wght@100..900&display=swap");
 
 * {
