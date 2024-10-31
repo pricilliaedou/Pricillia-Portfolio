@@ -13,6 +13,17 @@
 .moi-description p {
   text-align: justify;
 }
+
+.cv-moi {
+  margin-top: 15px;
+  border: 1px solid grey;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-radius: 20px;
+  width: max-content;
+}
 .stack {
   display: flex;
   width: 100%;
@@ -29,4 +40,301 @@
   padding: 15px 10px;
   flex-wrap: wrap;
   border-radius: 20px;
+}
+
+/* Timeline */
+h2 {
+  margin: 5%;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 100;
+}
+.parcours-bloc {
+  display: flex;
+  flex-direction: column;
+  margin: 20px auto;
+  position: relative;
+}
+.parcours-etape {
+  margin-bottom: 20px;
+  position: relative;
+  display: flex;
+  margin: 20px 0;
+  border-radius: 6px;
+  align-self: center;
+  width: 50vw;
+  opacity: 0;
+  animation: fadeInUp 0.5s forwards;
+}
+.parcours-etape1 {
+  animation-delay: 1s;
+}
+.parcours-etape2 {
+  animation-delay: 2s;
+}
+.parcours-etape3 {
+  animation-delay: 3s;
+}
+.parcours-etape4 {
+  animation-delay: 4s;
+}
+
+.parcours-etape:nth-child(2n + 1) {
+  flex-direction: row-reverse;
+}
+
+.parcours-etape:nth-child(2n + 1) .parcours-etape-date {
+  border-radius: 0 6px 6px 0;
+}
+.parcours-etape:nth-child(2n + 1) .parcours-etape-contenu {
+  border-radius: 6px 0 0 6px;
+}
+.parcours-etape:nth-child(2n + 1) .parcours-etape-icon:before {
+  content: "";
+  width: 2px;
+  height: 100%;
+  position: absolute;
+  top: 0%;
+  left: 50%;
+  right: auto;
+  z-index: -1;
+  transform: translateX(-50%);
+  animation: fillTop 2s forwards 4s ease-in-out;
+}
+.parcours-etape:nth-child(2n + 1) .parcours-etape-icon:after {
+  content: "";
+  width: 100%;
+  height: 2px;
+  position: absolute;
+  right: 0;
+  z-index: -1;
+  top: 50%;
+  left: auto;
+  transform: translateY(-50%);
+  animation: fillLeft 2s forwards 4s ease-in-out;
+}
+.parcours-etape-titre {
+  font-size: 1.2rem;
+  line-height: 1.4;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+}
+.parcours-etape-contenu {
+  padding: 20px;
+  box-shadow: 0 30px 60px -12px rgba(50, 50, 93, 0.25),
+    0 18px 36px -18px rgba(0, 0, 0, 0.3), 0 -12px 36px -8px rgba(0, 0, 0, 0.025);
+  background: #fff;
+  width: calc(40vw - 84px);
+  border-radius: 0 6px 6px 0;
+}
+.parcours-etape-date {
+  font-size: 1.5rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  padding: 0 20px;
+  border-radius: 6px 0 0 6px;
+}
+.parcours-etape-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  align-self: center;
+  margin: 0 20px;
+  border-radius: 100%;
+  width: 40px;
+  box-shadow: 0 30px 60px -12px rgba(50, 50, 93, 0.25),
+    0 18px 36px -18px rgba(0, 0, 0, 0.3), 0 -12px 36px -8px rgba(0, 0, 0, 0.025);
+  padding: 40px;
+  height: 40px;
+  position: relative;
+}
+.parcours-etape-icon i {
+  font-size: 32px;
+}
+.parcours-etape-icon:before {
+  content: "";
+  width: 2px;
+  height: 100%;
+  position: absolute;
+  top: 0%;
+  z-index: -1;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: fillTop 2s forwards 4s ease-in-out;
+}
+.parcours-etape-icon:after {
+  content: "";
+  width: 100%;
+  height: 2px;
+  position: absolute;
+  left: 0%;
+  z-index: -1;
+  top: 50%;
+  transform: translateY(-50%);
+  animation: fillLeftOdd 2s forwards 4s ease-in-out;
+}
+.parcours-etape-description {
+  flex-basis: 60%;
+}
+
+.parcours-etape1:after {
+  background: red;
+}
+.parcours-etape1 .parcours-etape-date {
+  color: green;
+  background: red;
+}
+.parcours-etape1:nth-child(2n + 1) .parcours-etape-icon:before,
+.parcours-etape1:nth-child(2n + 1) .parcours-etape-icon:after {
+  background: green;
+}
+.parcours-etape1 .parcours-etape-icon {
+  background: green;
+  color: red;
+}
+.parcours-etape1 .parcours-etape-icon:before,
+.parcours-etape1 .parcours-etape-icon:after {
+  background: green;
+}
+.parcours-etape1 .parcours-etape-titre {
+  color: red;
+}
+
+.parcours-etape2:after {
+  background: #555ac0;
+}
+.parcours-etape2 .parcours-etape-date {
+  color: #87bbfe;
+  background: #555ac0;
+}
+.parcours-etape2:nth-child(2n + 1) .parcours-etape-icon:before,
+.parcours-etape2:nth-child(2n + 1) .parcours-etape-icon:after {
+  background: #87bbfe;
+}
+.parcours-etape2 .parcours-etape-icon {
+  background: #87bbfe;
+  color: #555ac0;
+}
+.parcours-etape2 .parcours-etape-icon:before,
+.parcours-etape2 .parcours-etape-icon:after {
+  background: #87bbfe;
+}
+.parcours-etape2 .parcours-etape-titre {
+  color: #555ac0;
+}
+
+.parcours-etape3:after {
+  background: #24b47e;
+}
+.parcours-etape3 .parcours-etape-date {
+  color: #aff1b6;
+  background-color: #24b47e;
+}
+.parcours-etape3:nth-child(2n + 1) .parcours-etape-icon:before,
+.parcours-etape3:nth-child(2n + 1) .parcours-etape-icon:after {
+  background: #aff1b6;
+}
+.parcours-etape3 .parcours-etape-icon {
+  background: #aff1b6;
+  color: #24b47e;
+}
+.parcours-etape3 .parcours-etape-icon:before,
+.parcours-etape3 .parcours-etape-icon:after {
+  background: #aff1b6;
+}
+.parcours-etape3 .parcours-etape-titre {
+  color: #24b47e;
+}
+.parcours-etape:last-child .parcours-etape-icon:before {
+  content: none;
+}
+.parcours-etape4:after {
+  background: violet;
+}
+.parcours-etape4 .parcours-etape-date {
+  color: orange;
+  background: violet;
+}
+.parcours-etape4:nth-child(2n + 1) .parcours-etape-icon:before,
+.parcours-etape4:nth-child(2n + 1) .parcours-etape-icon:after {
+  background: orange;
+}
+.parcours-etape4 .parcours-etape-icon {
+  background: orange;
+  color: violet;
+}
+.parcours-etape4 .parcours-etape-icon:before,
+.parcours-etape4 .parcours-etape-icon:after {
+  background: orange;
+}
+.parcours-etape4 .parcours-etape-titre {
+  color: violet;
+}
+
+@keyframes fadeInUp {
+  0% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fillLeft {
+  100% {
+    right: 100%;
+  }
+}
+@keyframes fillTop {
+  100% {
+    top: 100%;
+  }
+}
+@keyframes fillLeftOdd {
+  100% {
+    left: 100%;
+  }
+}
+
+@media (max-width: 786px) {
+  .parcours-etape {
+    flex-direction: column;
+    align-self: center;
+  }
+  .parcours-etape-contenu {
+    width: 100%;
+  }
+  .parcours-etape-icon {
+    border-radius: 6px 6px 0 0;
+    width: 100%;
+    margin: 0;
+    box-shadow: none;
+  }
+  .parcours-etape-icon:before,
+  .parcours-etape-icon:after {
+    display: none;
+  }
+  .parcours-etape-date {
+    border-radius: 0;
+    padding: 20px;
+  }
+  .parcours-etape:nth-child(2n + 1) {
+    flex-direction: column;
+    align-self: center;
+  }
+  .parcours-etape:nth-child(2n + 1) .parcours-etape-date {
+    border-radius: 0;
+    padding: 20px;
+  }
+  .parcours-etape:nth-child(2n + 1) .parcours-etape-icon {
+    border-radius: 6px 6px 0 0;
+    margin: 0;
+  }
 }
