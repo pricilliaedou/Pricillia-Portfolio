@@ -22,28 +22,28 @@
   -webkit-animation: fadein 2s forwards; /* Safari et Chrome */
 }
 .projet:nth-child(1) {
-  animation-delay: 0s; /* Pas de délai pour le premier projet */
+  animation-delay: 0s;
 }
 .projet:nth-child(2) {
-  animation-delay: 1s; /* Délai d'une seconde pour le deuxième projet */
+  animation-delay: 1s;
 }
 .projet:nth-child(3) {
-  animation-delay: 2s; /* Délai de deux secondes pour le troisième projet */
+  animation-delay: 2s;
 }
 .projet:nth-child(4) {
-  animation-delay: 3s; /* Délai de trois secondes pour le quatrième projet */
+  animation-delay: 3s;
 }
 .projet:nth-child(5) {
-  animation-delay: 4s; /* Délai de quatre secondes pour le cinquième projet */
+  animation-delay: 4s;
 }
 .projet:nth-child(6) {
-  animation-delay: 5s; /* Délai de cinq secondes pour le sixième projet */
+  animation-delay: 5s;
 }
 .projet:nth-child(7) {
-  animation-delay: 6s; /* Délai de six secondes pour le septième projet */
+  animation-delay: 6s;
 }
 .projet:nth-child(8) {
-  animation-delay: 7s; /* Délai de sept secondes pour le huitième projet */
+  animation-delay: 7s;
 }
 
 @keyframes fadein {
