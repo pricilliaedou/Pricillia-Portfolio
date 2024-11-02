@@ -1,11 +1,19 @@
-form {
-  max-width: 420px;
-  margin: 20px auto;
+.container {
+  height: 100vh;
 }
-
+.contact {
+  display: flex;
+  gap: 10px;
+  margin: 15px auto;
+  max-width: 420px;
+}
+h1 {
+  font-size: 20px;
+  margin-bottom: 0;
+}
 .feedback-input {
   color: white;
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: "Montserrat", Arial, sans-serif;
   font-weight: 500;
   font-size: 18px;
   border-radius: 5px;
@@ -51,11 +59,15 @@ textarea {
 .reseau {
   display: flex;
   flex-direction: column;
-  position: absolute;
-  width: max-content;
+  justify-content: flex-start;
   padding: 5px;
-  right: 20%;
-  top: 50%;
-  transform: translateY(-50%);
-  opacity: 0.7;
+  margin: 5px;
+}
+@media screen and (max-width: 575px) {
+  .projets {
+    justify-content: center;
+  }
+  .container {
+    height: auto;
+  }
 }

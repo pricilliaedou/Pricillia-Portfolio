@@ -27,7 +27,9 @@ section {
   width: 100%;
   margin: 0 auto;
   position: relative;
+  padding-bottom: 45px;
 }
+
 h1,
 h2 {
   font-family: "tan mon cheri", sans-serif;
@@ -69,11 +71,9 @@ main {
 }
 .home {
   width: 100%;
-  height: 100vh;
   display: flex;
   justify-content: center;
   flex-direction: column;
-  position: relative;
 }
 .dispo {
   display: flex;
@@ -114,6 +114,14 @@ main {
 .home-details nav {
   margin-bottom: 20px;
 }
+
+.hello {
+  padding: 0 30px;
+}
+.hello img {
+  width: 150px;
+  height: 100px;
+}
 nav {
   display: flex;
   gap: 20px;
@@ -122,10 +130,8 @@ nav {
   display: flex;
   gap: 5px;
 }
-
-.gif {
-  width: 150px;
-  height: 100px;
+.phone {
+  display: none;
 }
 .reseau {
   display: flex;
@@ -189,6 +195,82 @@ nav {
       calc(2 * 100% / 3) 0, calc(3 * 100% / 3) 0;
   }
 }
+
+/* @media (max-width: 786px) {
+  .parcours-etape {
+    flex-direction: column;
+    align-self: center;
+  }
+  .parcours-etape-contenu {
+    width: 100%;
+  }
+  .parcours-etape-icon {
+    border-radius: 6px 6px 0 0;
+    width: 100%;
+    margin: 0;
+    box-shadow: none;
+  }
+  .parcours-etape-icon:before,
+  .parcours-etape-icon:after {
+    display: none;
+  }
+  .parcours-etape-date {
+    border-radius: 0;
+    padding: 20px;
+  }
+  .parcours-etape:nth-child(2n + 1) {
+    flex-direction: column;
+    align-self: center;
+  }
+  .parcours-etape:nth-child(2n + 1) .parcours-etape-date {
+    border-radius: 0;
+    padding: 20px;
+  }
+  .parcours-etape:nth-child(2n + 1) .parcours-etape-icon {
+    border-radius: 6px 6px 0 0;
+    margin: 0;
+  }
+} */
+
+@media screen and (max-width: 575px) {
+  nav {
+    display: none;
+  }
+
+  .container {
+    justify-content: center;
+  }
+  .home {
+    align-items: center;
+  }
+  .home-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .home-details h1 {
+    text-align: center;
+  }
+  .phone {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .nav-phone {
+    width: 200px;
+    height: 200px;
+    padding: 15px;
+    border-radius: 100%;
+    background-color: pink;
+  }
+  .reseau {
+    justify-content: center;
+  }
+}
+
 /* @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto+Slab:wght@100..900&display=swap");
 
 * {

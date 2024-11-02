@@ -127,3 +127,22 @@
   padding: 10px;
   border-radius: 20px;
 }
+@media screen and (max-width: 1024px) {
+  .projet {
+    width: 45%;
+    gap: 5%;
+  }
+}
+@media screen and (max-width: 575px) {
+  .projets {
+    justify-content: center;
+  }
+  .projet {
+    width: 80%;
+  }
+  .phone {
+    position: sticky;
+    left: 50%;
+    transform: translateX(0%);
+  }
+}

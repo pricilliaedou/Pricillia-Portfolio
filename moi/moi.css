@@ -43,10 +43,11 @@
 }
 
 /* Timeline */
+
 h2 {
-  margin: 5%;
-  text-align: center;
-  font-size: 2rem;
+  /* margin: 5%; */
+  /* text-align: center; */
+  /* font-size: 2rem; */
   font-weight: 100;
 }
 .parcours-bloc {
@@ -62,7 +63,7 @@ h2 {
   margin: 20px 0;
   border-radius: 6px;
   align-self: center;
-  width: 50vw;
+  width: 60vw;
   opacity: 0;
   animation: fadeInUp 0.5s forwards;
 }
@@ -304,6 +305,34 @@ h2 {
 }
 
 @media (max-width: 786px) {
+  .home {
+    align-items: center;
+  }
+  .home-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .home-details h1 {
+    text-align: center;
+  }
+
+  .moi-informations {
+    flex-direction: column;
+    justify-content: center;
+  }
+  .moi-image {
+    display: flex;
+    justify-content: center;
+  }
+  .moi-description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .skill {
+    width: 30%;
+  }
   .parcours-etape {
     flex-direction: column;
     align-self: center;
@@ -336,5 +365,16 @@ h2 {
   .parcours-etape:nth-child(2n + 1) .parcours-etape-icon {
     border-radius: 6px 6px 0 0;
     margin: 0;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .skill {
+    width: 60%;
+  }
+  .phone {
+    position: sticky;
+    left: 50%;
+    transform: translateX(0%);
   }
 }
